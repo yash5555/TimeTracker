@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\common.props"></Import>
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>TimeTracking.Application</AssemblyName>
+    <PackageId>TimeTracking.Application</PackageId>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace>TimeTracking</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Abp.EntityFrameworkCore.EFPlus" Version="6.3.0" />
+    <PackageReference Include="NPOI" Version="2.5.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TimeTracking.Application.Shared\TimeTracking.Application.Shared.csproj" />
+    <ProjectReference Include="..\TimeTracking.Core\TimeTracking.Core.csproj" />
+    <ProjectReference Include="..\TimeTracking.EntityFrameworkCore\TimeTracking.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+</Project>
